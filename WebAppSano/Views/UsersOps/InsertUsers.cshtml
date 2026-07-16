@@ -1,0 +1,57 @@
+﻿@model WebAppSano.Models.UsersModel
+@{
+    ViewData["Title"] = "InsertUsers";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Add User</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form asp-action="InsertUsers" method="post">
+
+                        <div class="mb-3">
+                            <label  class="form-label">Name</label>
+                            <input asp-for="Name"  class="form-control" placeholder="Enter full name" />
+                            <span  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label  class="form-label">Email</label>
+                            <input asp-for="EMail" class="form-control" placeholder="Enter email" />
+                            <span  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label  class="form-label">Password</label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Enter password" />
+                            <span  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label  class="form-label">Date of Birth</label>
+                            <input asp-for="DoB" type="date" class="form-control" />
+                            <span  class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                Save User
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
